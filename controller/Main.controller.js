@@ -9,6 +9,7 @@ sap.ui.define([
             const bundle = await this.getView().getModel("i18n").getResourceBundle();
             // MessageToast.show(bundle.getText("welcomeMessage"));
             //KJKJ KJ
+            // console.log("Hello!");
         }
     });
 });

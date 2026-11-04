@@ -1,0 +1,101 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "com.shinwokkang.sappou1",
+    "type": "application",
+    "i18n": {
+      "bundleUrl": "i18n/i18n.properties",
+      "supportedLocales": ["", "ko"],
+      "fallbackLocale": ""
+    },
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "sourceTemplate": {
+      "id": "@sap-ux/fiori-freestyle-writer:basic",
+      "version": "3.0.134"
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "SAPPOU1-display": {
+          "semanticObject": "SAPPOU1",
+          "action": "display",
+          "title": "{{appTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.154.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.shinwokkang.sappou1.i18n.i18n",
+          "supportedLocales": ["", "ko"],
+          "fallbackLocale": ""
+        }
+      }
+    },
+    "resources": {
+      "css": [{ "uri": "css/style.css" }]
+    },
+    "rootView": {
+      "viewName": "com.shinwokkang.sappou1.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.shinwokkang.sappou1.view",
+        "viewPath": "com.shinwokkang.sappou1.view",
+        "async": true
+      },
+      "routes": [
+        {
+          "name": "RouteMain",
+          "pattern": ":?query:",
+          "target": ["TargetMain"]
+        }
+      ],
+      "targets": {
+        "TargetMain": {
+          "id": "Main",
+          "name": "Main"
+        }
+      }
+    }
+  }
+}

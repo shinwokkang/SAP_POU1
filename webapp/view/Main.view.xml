@@ -1,0 +1,22 @@
+<mvc:View
+    controllerName="com.shinwokkang.sappou1.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="mainPage" title="{i18n>appTitle}">
+        <content>
+            <VBox id="welcomeContent" class="sapUiResponsiveMargin appWelcome" width="auto">
+                <Title id="welcomeTitle" text="{i18n>welcomeTitle}" level="H1" />
+                <Text id="welcomeDescription" text="{i18n>appDescription}" class="sapUiSmallMarginTop" />
+                <Panel id="gettingStartedPanel" headerText="{i18n>gettingStartedTitle}" class="sapUiMediumMarginTop">
+                    <content>
+                        <VBox id="gettingStartedContent" class="sapUiSmallMargin">
+                            <ObjectStatus id="readyStatus" text="{i18n>readyStatus}" state="Success" icon="sap-icon://accept" />
+                            <Text id="gettingStartedText" text="{i18n>gettingStartedText}" class="sapUiSmallMarginTop" />
+                            <Button id="getStartedButton" text="{i18n>getStartedButton}" type="Emphasized" press=".onGetStarted" class="sapUiMediumMarginTop" />
+                        </VBox>
+                    </content>
+                </Panel>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

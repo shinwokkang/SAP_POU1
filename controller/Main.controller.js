@@ -5,10 +5,12 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("com.shinwokkang.sappou1.controller.Main", {
-        async onGetStarted() {
+        async onGetStarted() 
+        {
             const bundle = await this.getView().getModel("i18n").getResourceBundle();
             // MessageToast.show(bundle.getText("welcomeMessage"));
-            //KJKJ KJ
+            //KJKJ KJiojmijnmimimimimi
+            // fdasfdas
         }
     });
 });
